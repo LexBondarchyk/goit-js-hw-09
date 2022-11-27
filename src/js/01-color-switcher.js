@@ -4,7 +4,9 @@ const refs = {
   stopBtn: document.querySelector('button[data-action="stop"]'),
   body: document.querySelector("body"),
 };
-
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 // const colors = [
 //   "#FFFFFF",
 //   "#2196F3",
@@ -14,9 +16,9 @@ const refs = {
 //   "#795548",
 // ];
 
-const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
+// const randomIntegerFromInterval = (min, max) => {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// };
 
 const timer = {
   isActive: false,
@@ -29,7 +31,7 @@ const timer = {
     this.switchColors = setInterval(() => {
       const min = 0;
       const max = colors.length - 1;
-      let i = randomIntegerFromInterval(min, max);
+      let i = getRandomHexColor();
       refs.body.style.backgroundColor = colors[i];
     }, 1000);
   },
