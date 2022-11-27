@@ -31,7 +31,7 @@ const timer = {
     this.switchColors = setInterval(() => {
       const min = 0;
       const max = colors.length - 1;
-      let i = getRandomHexColor();
+      let i = randomIntegerFromInterval(min, max);
       refs.body.style.backgroundColor = colors[i];
     }, 1000);
   },
