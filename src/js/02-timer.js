@@ -1,3 +1,5 @@
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css"
 const refs = {
   days: document.querySelector('.value[data-value="days"]'),
   hours: document.querySelector('.value[data-value="hours"]'),
